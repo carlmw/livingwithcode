@@ -1,0 +1,320 @@
+<!doctype html>
+<html>
+<head>
+  <title>Living with other people's code</title>
+  <meta charset="UTF-8" />
+</head>
+<body>
+  <h1>Living with other people's code</h1>
+
+  <aside class="notes">
+    <ul>
+      <li>i've worked on mostly agency work up until this point</li>
+      <li>i've worked on a few products but mostly green field stuff</li>
+      <li>this is the first time i've inherited a code base</li>
+      <li>I wanted the challenge of taking an existing product and improving it over time.</li>
+      <li>I regret everything</li>
+      <li>When I joined we had no module system, no way to trace dependencies. globals everywhere.</li>
+      <li>I had a crippling fear of breaking everything</li>
+      <li>I'm only now getting to grips with things</li>
+      <li>Here are some of the things I try to work and live by (with mixed success)</li>
+      <li>Some of it is common practice, but is worth mentioning anyway</li>
+      <li>Some are just general lifestyle suggestions</li>
+    </ul>
+  </aside>
+
+  <section>
+    <h1>1. Start thinking of it as your code</h1>
+
+    <aside class="notes">
+      <ul>
+        <li>There is no such thing as legacy code</li>
+        <li>Just code you dont like</li>
+      </ul>
+    </aside>
+  </section>
+
+  <section>
+    <h1>2. Don't blame other people</h1>
+
+    <aside class="notes">
+      <ul>
+        <li>Your predecessor will most likely have been presented with different priorities to yourself.</li>
+        <li>At an early stage, shipping is a high priority.</li>
+        <li>This is okay</li>
+        <li>It is impossible to know what new requirements will come along.</li>
+        <li>It is an awful, but fun challenge to improve things.</li>
+      </ul>
+    </aside>
+  </section>
+
+  <section>
+    <h1>3. Change is inevitable</h1>
+
+    <p><q>It is change, continuing change, inevitable change, that is the dominant factor in society today. No sensible decision can be made any longer without taking into account not only the world as it is, but the world as it will be.</q> <i>— Isaac Asimov</i></p>
+
+    <aside class="notes">
+      <ul>
+        <li>You cannot know with any degree of certainty what requirements will come up in the following months and years</li>
+        <li>Do your best with the limited information available to you.</li>
+      </ul>
+    </aside>
+  </section>
+
+  <section>
+    <h1>4. Treat all code as technical debt</h1>
+
+    <aside class="notes">
+      <ul>
+        <li>All code is a barrier to change</li>
+        <li>To change code you must first understand entirely what it does</li>
+        <li>Your job isn't done until you've removed all code from your application</li>
+        <li>Your job is never done</li>
+      </ul>
+    </aside>
+  </section>
+
+  <section>
+    <h1>5. Delete code</h1>
+
+    <aside class="notes">
+      <ul>
+        <li>If no one uses it then it just muddies the application. Again the more code there is, the harder it is to make a change.</li>
+        <li>Source control has your back</li>
+      </ul>
+    </aside>
+  </section>
+
+  <section>
+    <h1>6. Lots of code is worse than bad code</h1>
+
+    <aside class="notes">
+      <ul>
+        <li>While lots of code is probably just bad code</li>
+        <li>It is easier to change a small ammount of bad code than to change a lot of code</li>
+      </ul>
+    </aside>
+  </section>
+
+  <section>
+    <h1>7. Always be refactoring</h1>
+
+    <aside class="notes">
+      <ul>
+        <li>Whenever you touch a file, improve it.</li>
+        <li>Don't be afraid to take some time</li>
+        <li>Tests are your safety net.</li>
+        <li>If there are no useful tests.</li>
+        <li>Write or rewrite then.</li>
+        <li>Bad tests are worse than no tests</li>
+        <li>You've taken the time to understand the code</li>
+        <li>Don't waste that time</li>
+        <li>Capture that knowledge with a test</li>
+      </ul>
+    </aside>
+  </section>
+
+  <section>
+    <h1>8. Don't try to fix too much at once</h1>
+
+    <aside class="notes">
+      <ul>
+        <li>Estimating wide reaching refactoring is hard</li>
+        <li>Choose your target wisely</li>
+        <li>It is very easy to bite off more than you can chew.</li>
+        <li>If you find that something is taking far longer than you thought, cut your loses and stop.</li>
+        <li>Don't feel bad</li>
+        <li>Check in what you can</li>
+        <li>Break it up some more.</li>
+        <li>You can get the rest of it next time.</li>
+      </ul>
+    </aside>
+  </section>
+
+  <section>
+    <h1>9. Seriously, always be refactoring</h1>
+
+    <aside class="notes">
+      <ul>
+        <li>Don't wait until things are completely awful</li>
+        <li>Don't let code block a new feature</li>
+      </ul>
+    </aside>
+  </section>
+
+  <section>
+    <h1>10. When things are bad, explain why</h1>
+
+    <aside class="notes">
+      <ul>
+        <li>This is very hard to do</li>
+        <li>Especially with non engineers</li>
+        <li>Ideally refactoring work would be incremental, continuous</li>
+        <li>It shouldn't be necessary to mention it to anyone</li>
+        <li>It should be something you do as part of your own development process</li>
+        <li>But we live in the real world</li>
+        <li>We're human, we cant always see problems coming</li>
+        <li>Left unchecked code can grow into a huge perhaps insurmountable barrier to continued work</li>
+        <li>It is tough for non engineers to understand why this happens</li>
+        <li>When code gets in the way of a new feature</li>
+        <li>Explain what went wrong, why things are hard to change</li>
+        <li>It can be helpful to explain this in terms of design limitations</li>
+        <li>Explain how the system was designed to do a particular thing and how that is incompatible with the new requirement</li>
+        <li>Explain how it can be avoided in the future</li>
+      </ul>
+    </aside>
+  </section>
+
+  <section>
+    <h1>11. Try to give well reasoned estimates</h1>
+
+    <aside class="notes">
+      <ul>
+        <li>It helps to be aware of upcoming work ahead of planning</li>
+        <li>Take a look at the backlog</li>
+        <li>This helps you know ahead of time what needs to change</li>
+        <li>So you're not put on the spot and forced to pull an estimate out of your butt</li>
+        <li>It is really hard</li>
+        <li>It gets easier the more you get to grips with the code base</li>
+        <li>You'll know where the choke points are</li>
+      </ul>
+    </aside>
+  </section>
+
+  <section>
+    <h1>12. The more you understand, the more frustrated you'll become</h1>
+
+<pre><code data-trim class="javascript">
+if (!this.widgetType) {
+  this.widgetType = GB.models.widgetTypes.get(this.get("widget_type_id"));
+}
+</code></pre>
+    <aside class="notes">
+      <ul>
+        <li>This block of code is a constant source of frustration</li>
+        <li>I haven't worked up the courage to do something about it</li>
+        <li>You'll want to change everything, but you cant</li>
+      </ul>
+    </aside>
+  </section>
+
+  <section>
+    <h1>13. Concentrate on the things you can change</h1>
+
+    <aside class="notes">
+      <ul>
+        <li>You need victories, no matter how small</li>
+        <li>It relieves the frustration</li>
+        <li>Feeling that you're making some progress does wonders</li>
+      </ul>
+    </aside>
+  </section>
+
+  <section>
+    <h1>14. Isolate, and conquer</h1>
+
+    <aside class="notes">
+      <ul>
+        <li>Create little colonies of better code at the edges of your application</li>
+        <li>Write an adapter that helps your better code communicate</li>
+         with the rest of the application in the way you want it to</li>
+        <li>Expand those colonies up through your application</li>
+        <li>Make them spread like a virus</li>
+        <li>Connect those parts together</li>
+      </ul>
+    </aside>
+  </section>
+
+  <section>
+    <h1>15. Don't follow project conventions</h1>
+
+    <aside class="notes">
+      <ul>
+        <li>Bullshit to that</li>
+        <li>Adjust them, augment them, try new things. Keep what sticks.</li>
+        <li>Code is supposed to be expressive</li>
+        <li>Express yourself.</li>
+        <li>Come on and do it</li>
+        <li>But don't ever express yourself with comma first variable declaration</li>
+        <li>I will ruin you</li>
+      </ul>
+    </aside>
+  </section>
+
+  <section>
+    <h1>16. Write the code you want to be able to write</h1>
+
+    <aside class="notes">
+      <ul>
+        <li>Design your API</li>
+        <li>Don't think about how you're going to implement it</li>
+        <li>It will bias your design</li>
+        <li>Make it pretty</li>
+        <li>Design it for other people</li>
+        <li>Then write the code that actually makes it work</li>
+      </ul>
+    </aside>
+  </section>
+
+  <section>
+    <h1>17. Always code as if you want the person who ends up maintaining your code to be your BFF</h1>
+
+    <aside class="notes">
+      <ul>
+        <li>Be nice</li>
+        <li>It will be ok</li>
+      </ul>
+    </aside>
+  </section>
+
+  <section>
+    <h1>18. Go for a walk</h1>
+
+    <aside class="notes">
+      <ul>
+        <li>Stop thinking about code</li>
+        <li>This is impossible</li>
+      </ul>
+    </aside>
+  </section>
+
+  <section>
+    <h1>19. Get nerdy about coffee</h1>
+
+    <aside class="notes">
+      <ul>
+        <li>Or tea or something</li>
+        <li>Do something that gets you away from your desk for 5 minutes</li>
+        <li>Do something completely mundane that requires your undivided attention.</li>
+      </ul>
+    </aside>
+  </section>
+
+  <section>
+    <h1>20. Don't write code in your own time</h1>
+
+    <aside class="notes">
+      <ul>
+        <li>Or do if you really feel inclined</li>
+        <li>But dont feel obliged to do open source</li>
+        <li>It is ok to work 9-6</li>
+        <li>github is not your CV</li>
+      </ul>
+    </aside>
+  </section>
+
+  <section>
+    <h1>21. Don't think about work problems while away from work</h1>
+
+    <aside class="notes">
+      <ul>
+        <li>This is impossible</li>
+        <li>I used to have massive problems switching off from work</li>
+        <li>Then I bought a house</li>
+        <li>Buy a house</li>
+        <li>Or have a kid or something</li>
+      </ul>
+    </aside>
+  </section>
+</body>
+</html>
